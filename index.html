@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AI Chatbot for DTE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+</head>
+<body>
+  <header class="nav">
+    <div class="nav__inner container">
+      <div class="nav__brand">
+        <div class="nav__logo-dot"></div>
+        <span class="nav__title">AI Chatbot for DTE</span>
+      </div>
+      <nav class="nav__links">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How it Works</a>
+        <a href="#contact">Contact</a>
+        <a href="#chat-demo" class="btn btn--primary">Start Chat</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="hero" class="section section--hero">
+      <div class="section__inner container section__inner--hero">
+        <div class="hero__content">
+          <h1>AI Chatbot for the Department of Technical Education</h1>
+          <p>
+            Get instant answers to questions about admissions, exams, courses,
+            and scholarships. Designed to support students and staff 24/7.
+          </p>
+          <div class="hero__actions">
+            <a href="#chat-demo" class="btn btn--primary">Start Chat</a>
+            <a href="#about" class="hero__link">Learn more</a>
+          </div>
+        </div>
+        <div class="hero__visual">
+          <div class="chat-card">
+            <div class="chat-card__header">
+              <div class="chat-card__avatar">D</div>
+              <div>
+                <div class="chat-card__title">DTE AI Assistant</div>
+                <div class="chat-card__status">Online · 24/7 support</div>
+              </div>
+            </div>
+            <div class="chat-card__messages">
+              <div class="bubble bubble--bot">
+                Hello! I’m the DTE AI assistant. How can I help you today?
+              </div>
+              <div class="bubble bubble--user">
+                What is the eligibility for diploma admission?
+              </div>
+              <div class="bubble bubble--bot">
+                Students must have completed 10th grade with mathematics and science.
+              </div>
+              <div class="bubble bubble--user">
+                When are the semester exams?
+              </div>
+              <div class="bubble bubble--bot">
+                Semester exams usually start in December and May. Exact dates are
+                notified by the Department of Technical Education.
+              </div>
+            </div>
+            <div class="chat-card__input">
+              <input
+                type="text"
+                placeholder="Type your question here…"
+                aria-label="Chat input"
+              />
+              <button class="chat-card__send" aria-label="Send message">➤</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section section--alt">
+      <div class="section__inner container section__inner--narrow">
+        <h2>About the AI Chatbot</h2>
+        <p>
+          The AI Chatbot for the Department of Technical Education is built to
+          assist students and staff with quick, accurate information about
+          academic processes and services. Instead of searching through
+          documents or waiting in queues, users can simply ask a question and
+          get an instant response.
+        </p>
+        <p>
+          The system helps students access details related to admissions, course
+          structures, examination schedules, scholarship programs, and key
+          department policies—reducing manual workload for staff and improving
+          accessibility to information across the department.
+        </p>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="section">
+      <div class="section__inner container">
+        <header class="section__header">
+          <h2>Key Features</h2>
+          <p>
+            A modern AI-powered assistant delivering fast, reliable information
+            for students and staff.
+          </p>
+        </header>
+        <div class="grid grid--features">
+          <article class="card">
+            <div class="card__icon">24/7</div>
+            <h3>24/7 Student Support</h3>
+            <p>
+              Students can ask questions at any time—no waiting for office hours
+              or phone lines.
+            </p>
+          </article>
+          <article class="card">
+            <div class="card__icon">⚡</div>
+            <h3>Instant Query Resolution</h3>
+            <p>
+              AI responds within seconds, helping users reach the right
+              information faster.
+            </p>
+          </article>
+          <article class="card">
+            <div class="card__icon">🎓</div>
+            <h3>Admission Guidance</h3>
+            <p>
+              Provides eligibility details, required documents, and key dates
+              for diploma admissions.
+            </p>
+          </article>
+          <article class="card">
+            <div class="card__icon">📚</div>
+            <h3>Course Information</h3>
+            <p>
+              Shares information about diploma programs, syllabi, and
+              departments in a clear format.
+            </p>
+          </article>
+          <article class="card">
+            <div class="card__icon">📝</div>
+            <h3>Exam Assistance</h3>
+            <p>
+              Offers schedules, result updates, and important notifications
+              related to semester exams.
+            </p>
+          </article>
+          <article class="card">
+            <div class="card__icon">💰</div>
+            <h3>Scholarship Information</h3>
+            <p>
+              Guides students through available scholarship schemes and
+              application procedures.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how-it-works" class="section section--alt">
+      <div class="section__inner container">
+        <header class="section__header">
+          <h2>How It Works</h2>
+          <p>
+            A simple and transparent workflow that turns natural questions into
+            reliable answers.
+          </p>
+        </header>
+        <div class="steps">
+          <div class="steps__line"></div>
+          <div class="steps__items">
+            <div class="step">
+              <div class="step__badge">1</div>
+              <h3>User types a question</h3>
+              <p>
+                A student or staff member asks a question such as
+                “When are the diploma admissions?”
+              </p>
+            </div>
+            <div class="step">
+              <div class="step__badge">2</div>
+              <h3>AI processes the request</h3>
+              <p>
+                Natural Language Processing interprets the user’s query and
+                understands the intent.
+              </p>
+            </div>
+            <div class="step">
+              <div class="step__badge">3</div>
+              <h3>System retrieves information</h3>
+              <p>
+                The chatbot fetches relevant, up-to-date data from the
+                department’s information sources.
+              </p>
+            </div>
+            <div class="step">
+              <div class="step__badge">4</div>
+              <h3>Chatbot provides answer</h3>
+              <p>
+                The user receives an instant, clear response directly in the
+                conversational interface.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chat demo -->
+    <section id="chat-demo" class="section">
+      <div class="section__inner container">
+        <header class="section__header">
+          <h2>Chatbot Demo</h2>
+          <p>Preview how the DTE AI assistant responds to typical queries.</p>
+        </header>
+        <div class="chat-demo">
+          <div class="chat-demo__window">
+            <div class="chat-demo__header">
+              <div class="chat-demo__avatar">D</div>
+              <div>
+                <div class="chat-demo__title">DTE AI Assistant</div>
+                <div class="chat-demo__subtitle">Ready to help you</div>
+              </div>
+            </div>
+            <div class="chat-demo__messages">
+              <div class="bubble bubble--user">
+                What is the eligibility for diploma admission?
+              </div>
+              <div class="bubble bubble--bot">
+                Students must have completed 10th grade with mathematics and
+                science. Additional criteria may apply as per DTE guidelines.
+              </div>
+              <div class="bubble bubble--user">
+                When are the semester exams?
+              </div>
+              <div class="bubble bubble--bot">
+                Semester exams are usually conducted in December and May.
+                Official schedules are published on the DTE portal.
+              </div>
+            </div>
+            <div class="chat-demo__input">
+              <input
+                type="text"
+                placeholder="Ask about admissions, exams, courses..."
+                aria-label="Demo chat input"
+              />
+              <button class="chat-demo__send" aria-label="Send">➤</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="section section--alt">
+      <div class="section__inner container section__inner--split">
+        <div>
+          <h2>Benefits for Students and Staff</h2>
+          <p>
+            The AI chatbot streamlines communication across the Department of
+            Technical Education, making information access smoother and more
+            efficient.
+          </p>
+        </div>
+        <ul class="benefits">
+          <li>Faster access to verified departmental information</li>
+          <li>Reduced workload for administrative and helpdesk staff</li>
+          <li>Improved student experience and satisfaction</li>
+          <li>24/7 availability beyond office hours</li>
+          <li>Consistent, accurate answers sourced from official data</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Tech stack -->
+    <section class="section">
+      <div class="section__inner container">
+        <header class="section__header">
+          <h2>Technology Stack</h2>
+          <p>
+            Built using modern AI and web technologies to deliver reliable and
+            scalable support.
+          </p>
+        </header>
+        <div class="pills">
+          <span class="pill">Artificial Intelligence</span>
+          <span class="pill">Natural Language Processing</span>
+          <span class="pill">Python</span>
+          <span class="pill">Machine Learning</span>
+          <span class="pill">Web Interface</span>
+          <span class="pill">Database</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer / Contact -->
+  <footer id="contact" class="footer">
+    <div class="footer__inner container">
+      <div class="footer__top">
+        <div>
+          <h3>Department of Technical Education</h3>
+          <p>
+            AI Chatbot initiative to enhance access to academic and
+            administrative information.
+          </p>
+        </div>
+        <div class="footer__links">
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+          <a href="#hero">Back to top</a>
+          <a href="#hero">Privacy Policy</a>
+        </div>
+      </div>
+      <div class="footer__contact">
+        <p><strong>Email:</strong> support@dte.example.gov</p>
+        <p><strong>Phone:</strong> +91-0000-000000</p>
+        <p><strong>Address:</strong> Department of Technical Education, City, State</p>
+      </div>
+      <div class="footer__bottom">
+        © 2026 Department of Technical Education. All rights reserved.
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+
