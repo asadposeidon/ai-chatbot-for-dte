@@ -16,8 +16,12 @@ document.addEventListener("DOMContentLoaded", () => {
     messages.scrollTop = messages.scrollHeight;
   }
 
+  // 🔹 CHANGE THIS URL
+  const API_URL = "https://YOUR-RENDER-SERVICE.onrender.com/api/chat";
+
   async function fetchReply(prompt) {
-    const res = await fetch("/api/chat", {
+
+    const res = await fetch(API_URL, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
