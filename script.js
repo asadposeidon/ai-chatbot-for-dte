@@ -1,5 +1,3 @@
-// Do NOT store secrets in client. Use server proxy instead.
-
 document.addEventListener("DOMContentLoaded", () => {
 
   const input = document.querySelector(".chat-demo__input input");
@@ -16,26 +14,38 @@ document.addEventListener("DOMContentLoaded", () => {
     messages.scrollTop = messages.scrollHeight;
   }
 
-  // 🔹 CHANGE THIS URL
   const API_URL = "https://ai-chatbot-for-dte.onrender.com/api/chat";
 
   async function fetchReply(prompt) {
 
-    const res = await fetch(API_URL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({ prompt })
-    });
+    try {
 
-    const data = await res.json();
+      const res = await fetch(API_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ prompt })
+      });
 
-    if (!res.ok) {
-      throw new Error(data.error || "Server error");
+      console.log("Response status:", res.status);
+
+      const data = await res.json();
+      console.log("Server response:", data);
+
+      if (!res.ok) {
+        throw new Error(data.error || "Server error");
+      }
+
+      return data.reply || "No reply from AI";
+
+    } catch (error) {
+
+      console.error("Fetch error:", error);
+      throw error;
+
     }
 
-    return data.reply || "No reply from server";
   }
 
   async function sendMessage() {
@@ -61,8 +71,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     } catch (error) {
 
-      typingBubble.textContent = "Error: failed to get a reply.";
-      console.error(error);
+      typingBubble.textContent =
+        "Server is waking up or there was an error. Please try again.";
 
     }
 
