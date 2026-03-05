@@ -1,10 +1,12 @@
 const express = require("express");
 const axios = require("axios");
+const cors = require("cors");
 require("dotenv").config();
 const path = require("path");
 
 const app = express();
 
+app.use(cors()); // ✅ allow frontend requests
 app.use(express.json());
 app.use(express.static(path.join(__dirname)));
 
@@ -33,7 +35,7 @@ app.post("/api/chat", async (req, res) => {
         headers: {
           "Authorization": `Bearer ${process.env.DEEPSEEK_API_KEY}`,
           "Content-Type": "application/json",
-          "HTTP-Referer": "http://localhost:5500",
+          "HTTP-Referer": "https://your-render-url.onrender.com", // ✅ change this
           "X-Title": "AI Chatbot Demo"
         }
       }
@@ -45,18 +47,19 @@ app.post("/api/chat", async (req, res) => {
 
   } catch (error) {
 
-    console.error(error.response?.data || error.message);
+    console.error("OpenRouter error:", error.response?.data || error.message);
 
     res.status(500).json({
-      error: "Provider error"
+      error: "Provider error",
+      details: error.response?.data || error.message
     });
 
   }
 
 });
 
-const PORT = process.env.PORT || 5500;
+const PORT = process.env.PORT || 10000; // ✅ Render usually uses 10000
 
 app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
