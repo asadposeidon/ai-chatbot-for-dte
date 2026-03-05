@@ -1,0 +1,20 @@
+{
+  "name": "new-folder",
+  "version": "1.0.0",
+  "description": "This project is a modern landing page for an AI-powered chatbot for the Department of Technical Education (DTE).  \r It mirrors a Figma design for a single-page site that explains and demonstrates the chatbot.",
+  "main": "api-key.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "axios": "^1.13.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "node-fetch": "^3.3.2"
+  }
+}

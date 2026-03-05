@@ -1,0 +1,2 @@
+// Paste your API key below. DO NOT commit this file to version control.
+window.DTE_API_KEY = 'AIzaSyDiLo5WOa7QlFpE-X38m-DXA54DDjF21yYsk-or-v1-24d0529f3a6d82cce926f6bfbf77ccf69022f3e705795ab5b0426b24d1f3a2f9';
