@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // 🔹 CHANGE THIS URL
-  const API_URL = "https://YOUR-RENDER-SERVICE.onrender.com/api/chat";
+  const API_URL = "https://ai-chatbot-for-dte.onrender.com/api/chat";
 
   async function fetchReply(prompt) {
 
