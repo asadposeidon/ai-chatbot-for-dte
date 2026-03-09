@@ -35,7 +35,7 @@ app.post("/api/chat", async (req, res) => {
         headers: {
           "Authorization": `Bearer ${process.env.DEEPSEEK_API_KEY}`,
           "Content-Type": "application/json",
-          "HTTP-Referer": "https://ai-chatbot-dte.onrender.com", // ✅ change this
+          "HTTP-Referer": "https://ai-chatbot-for-dte-1.onrender.com", // ✅ change this
           "X-Title": "AI Chatbot Demo"
         }
       }
